@@ -8,7 +8,11 @@ const nextConfig = {
     ]
   },
   experimental: {
-    serverComponentsExternalPackages: ['@sparticuz/chromium', 'puppeteer-core']
+    serverComponentsExternalPackages: ['@sparticuz/chromium', 'puppeteer-core'],
+    outputFileTracingIncludes: {
+      '/api/search': ['./node_modules/@sparticuz/chromium/bin/**/*'],
+      '/api/search/route': ['./node_modules/@sparticuz/chromium/bin/**/*']
+    }
   }
 };
 export default nextConfig;
